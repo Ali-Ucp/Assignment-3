@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signin"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/heading"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/loginpagelogo"
+        >
+
+        <ImageButton
+            android:id="@+id/arrowback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+            android:backgroundTint="#00FFFFFF"
+            ></ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="serif"
+            android:text="Sign in"
+            android:textColor="@color/purple"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:id="@+id/welcomeheading"
+            ></TextView>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/welcomeback"
+        android:id="@+id/loginpagelogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        ></ImageView>
+    <!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Welcome back"
+        android:textColor="@color/purple"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:id="@+id/welcomeback"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginpagelogo"
+        app:layout_constraintBottom_toTopOf="@+id/card"
+        ></TextView>
+    -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/loginpagelogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linear"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="serif"
+            android:text="E-mail"
+            android:textColor="@color/purple"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/Email"
+            android:layout_gravity="left"
+
+            ></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="abc1234@gmail.com"
+            android:id="@+id/email"
+            android:background="@drawable/rectangleblackwithcorner"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:paddingLeft="15dp"
+            android:inputType="textEmailAddress"
+            ></EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="serif"
+            android:text="Password"
+            android:textColor="@color/purple"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/passwordheading"
+            android:layout_gravity="left"
+            ></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="ReadGood Password"
+            android:id="@+id/password"
+            android:background="@drawable/rectangleblackwithcorner"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="15dp"
+            android:inputType="textEmailAddress"
+            ></EditText>
+
+        <TextView
+            android:id="@+id/textViewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Forgot your password?"
+            android:textColor="@color/purple"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:layout_margin="5dp"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:id="@+id/signin"
+            android:backgroundTint="@color/purple"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/message"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="By continuing you agree to our Terms of Service and Privacy Policy"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:ignore="TextSizeCheck"
+            android:layout_margin="5dp"
+            ></TextView>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+<!--
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Copyright © ReadGood"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        tools:ignore="TextSizeCheck"
+        android:id="@+id/copyright"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        ></TextView>
+
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>

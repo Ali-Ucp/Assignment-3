@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewAccount"
+    android:background="@color/purple"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/linear1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/arrowback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_alignLeft="@id/heading"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/arrowbackwhite_24"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"></ImageButton>
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Create Account"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+
+            ></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linear1"
+    android:background="@drawable/twocornerrectangle"
+    android:orientation="vertical"
+       android:padding="10dp"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/relative2"
+       >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="First and Last Name"
+        android:id="@+id/name"
+        android:background="@drawable/rectangleblackwithcorner"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="15dp"
+        android:inputType="textPersonName"
+        ></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Your Email"
+        android:id="@+id/email"
+        android:background="@drawable/rectangleblackwithcorner"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:paddingLeft="15dp"
+        android:inputType="textEmailAddress"
+        ></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:background="@drawable/rectangleblackwithcorner"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="15dp"
+        ></EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Password must atleast be six characters long"
+        android:textSize="15sp"
+        android:gravity="start"
+        android:layout_gravity="left"
+        android:fontFamily="serif"
+        android:id="@+id/warning"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:drawableStart="@drawable/error_24dp_5f6368_fill0_wght400_grad0_opsz24"
+        android:drawablePadding="10dp"
+        ></TextView>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Show Password"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/checkbox"
+        ></CheckBox>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="25sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:id="@+id/createaccount"
+        android:backgroundTint="@color/purple"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/termsofservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="By creating an account, you agreed to the ReadGood Terms of Service and Privacy Policy"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        tools:ignore="TextSizeCheck"
+        ></TextView>
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Already have an account?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:ignore="TextSizeCheck"></TextView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Sign-in now"
+        android:layout_margin="15dp"
+        android:textSize="20sp"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:id="@+id/signin"
+        android:backgroundTint="@color/purple"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative"
+        android:gravity="bottom"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Copyright © ReadGood"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:ignore="TextSizeCheck"></TextView>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
